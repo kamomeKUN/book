@@ -1,4 +1,5 @@
 .DS_Store
+context.xml
 *.class
 *.jar
 .classpath
