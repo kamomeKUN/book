@@ -25,7 +25,7 @@ public class ProductAction extends Action {
 		if (keyword == null) keyword = "";
 
 		String strPrice = request.getParameter("price");
-		if (strPrice != null) {
+		if (strPrice != null && strPrice != "") {
 			price = Integer.parseInt(strPrice);
 		}
 		// 商品検索
@@ -33,7 +33,6 @@ public class ProductAction extends Action {
 		list = dao.search(keyword, price);
 		// セッションオブジェクトに設定
 		session.setAttribute("list", list);
-
 		return page;
 	}
 
