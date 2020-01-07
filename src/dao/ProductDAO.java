@@ -54,4 +54,25 @@ public class ProductDAO extends DAO {
 		con.close();
 		return line;
 	}
+
+	// 商品更新
+	public int update(Product product) throws Exception {
+		// 変数
+		String updSql = "update product set name = ?, price = ? where id = ?";
+		int line = 0;
+
+		Connection con = getConnection();
+
+		// SQL実行
+		PreparedStatement st = con.prepareStatement(updSql);
+		st.setString(1, product.getName());
+		st.setInt(2, product.getPrice());
+		st.setInt(3, product.getId());
+		line = st.executeUpdate();
+		// close処理
+		st.close();
+		con.close();
+
+		return line;
+	}
 }
