@@ -35,6 +35,10 @@ public class LoginAction extends Action {
 		// セッションオブジェクトに値を設定
 		session.setAttribute("customer", customer);
 		// 遷移画面を設定
+		String adminFlag = customer.getAdminFlag();
+		if (adminFlag.equals("01")) {
+			page = "../master/product.jsp";
+		}
 		return page;
 	}
 

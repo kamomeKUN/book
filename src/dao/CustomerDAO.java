@@ -28,6 +28,7 @@ public class CustomerDAO extends DAO {
 			customer.setId(res.getInt("id"));
 			customer.setLogin(res.getString("login"));
 			customer.setPassword(res.getString("password"));
+			customer.setAdminFlag(res.getString("adminFlag"));
 		}
 		// close処理
 		st.close();

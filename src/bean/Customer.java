@@ -7,6 +7,7 @@ public class Customer implements Serializable {
 	private int id;
 	private String login;
 	private String password;
+	private String adminFlag;
 	// setter-getter
 	public int getId() {
 		return id;
@@ -25,6 +26,12 @@ public class Customer implements Serializable {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getAdminFlag() {
+		return adminFlag;
+	}
+	public void setAdminFlag(String adminFlag) {
+		this.adminFlag = adminFlag;
 	}
 
 }

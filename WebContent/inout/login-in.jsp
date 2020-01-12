@@ -14,8 +14,8 @@
 		<div id="error" style="color:red; font-weight:bold;">
 			<c:out value="${message}"></c:out>
 		</div>
-		<p>ログインID</p><input type="text" name="login" value="">
-		<p>パスワード</p><input type="text" name="password" value="">
+		<p>ログインID</p><input type="text" name="login" required>
+		<p>パスワード</p><input type="password" name="password" required>
 		<p><input type="submit" value="ログイン"></p>
 	</form>
 </body>

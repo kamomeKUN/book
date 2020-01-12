@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>商品情報更新</title>
+<title>商品情報更新（管理者）</title>
 </head>
 <body>
 	<%@include file="../shopping/menu.jsp" %>
